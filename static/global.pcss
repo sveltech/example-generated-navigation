@@ -74,18 +74,47 @@ button:focus {
   margin-top: 24px;
 }
 #routify-app>nav {
-  height: 100%;
-  float: left;
-  margin-right: 128px
+  position: absolute;
+  top: 0; 
+  left: 0;
+  padding: 24px 24px 24px 24px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
+#routify-app>nav:focus-within {
+  width: auto;
+  height: auto;
+  background: rgba(64, 64, 64, 0.9);  
+}
+
+#routify-app>nav::before {
+  cursor: pointer;
+  content: "☰";
+  color: #333 !important;
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  left: 10px;  
+}
+#routify-app>nav>nav {margin-top: 24px;}
+
+#routify-app>nav:focus-within::before {
+  color: white !important
+}
+
+
 
 
   nav a {
     display: block;
+    color: #fff !important;
+    font-weight: bold;
   }
   nav {
     padding-left: 16px;
-    border-left: 2px #ddd solid
+    border-left: 2px #aaa solid
   }
 
 pre {font-size: 16px}
