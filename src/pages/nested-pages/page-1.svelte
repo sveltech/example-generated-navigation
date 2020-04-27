@@ -1,0 +1,1 @@
+<h1>I'm nested-pages/page-1.svelte</h1>
